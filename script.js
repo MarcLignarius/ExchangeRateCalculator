@@ -15,6 +15,7 @@ function calculate() {
     .then((data) => {
       const rate = data.rates[currency_two];
       rate_element.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
+      amount_element_2.value = (amount_element_1.value * rate).toFixed(2);
     });
 }
 
